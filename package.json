@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/wdio --spec ./test/specs/traditionalTest.spec.js",
-    "visualtest": "./node_modules/.bin/wdio wdio.conf.js --spec ./test/specs/visualAITests.spec.js"
+    "test": "./node_modules/.bin/wdio --spec ./test/specs/traditionalTestV2.spec.js",
+    "visualtest": "./node_modules/.bin/wdio wdio.visual.conf.js --spec ./test/specs/visualAITests.spec.js"
   },
   "keywords": [],
   "author": "",
