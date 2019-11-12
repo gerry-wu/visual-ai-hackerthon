@@ -14,20 +14,17 @@ describe('Data-driven Test', () => {
     {
       testCase: 'should show error when login without username and password',
       username: '',
-      password: '',
-      error: 'Both Username and Password must be present',
+      password: ''
     },
     {
       testCase: 'should show error when login without password',
       username: 'my name',
-      password: '',
-      error: 'Password must be present',
+      password: ''
     },
     {
       testCase: 'should show error when login without username',
       username: '',
-      password: 'testPassword',
-      error: 'Username must be present',
+      password: 'testPassword'
     },
   ]
 
