@@ -9,7 +9,7 @@ Technology used:
 
 * Test runner: [wdio test runner](https://github.com/webdriverio/webdriverio)
 
-* Visual regression: [applitools service from wdio[(https://webdriver.io/docs/applitools-service.html)
+* Visual regression: [applitools service from wdio](https://webdriver.io/docs/applitools-service.html)
 
 ## File Structure
 
