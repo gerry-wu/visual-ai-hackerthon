@@ -4,9 +4,12 @@
 
 The repo is created according to the requirement of [Applitools Visual AI Rockstar Hackathon 2019](https://applitools.com/hackathon) . It aims to compare the traditional e2e test with visual AI testing.
 
-E2E framework: [webdriverIO 5](https://github.com/webdriverio/webdriverio)
-Test runner: [wdio test runner](https://github.com/webdriverio/webdriverio)
-Visual regression: [applitools service from wdio[(https://webdriver.io/docs/applitools-service.html)
+Technology used: 
+* E2E framework: [webdriverIO 5](https://github.com/webdriverio/webdriverio)
+
+* Test runner: [wdio test runner](https://github.com/webdriverio/webdriverio)
+
+* Visual regression: [applitools service from wdio[(https://webdriver.io/docs/applitools-service.html)
 
 ## File Structure
 
@@ -35,7 +38,9 @@ The test is organized in Page Object Pattern.
  ┗ 📜wdio.visual.conf.js                   # wdio config with applitools service enabled
 ```
 
-Currently, the pages are using the path from V2 app. If you would like to run the test against the V1 app, just remove `V2` from all the relative paths used in page files; and also change the spec parameter of the `test` script from `package.json`
+Currently, the pages are using the path from V2 app. To run the test against the V1 app, you will need to:
+* remove `V2` from all the relative paths used in page files
+* change the `--spec` parameter of the `test` script from `package.json` so that it's pointing to `traditionalTest.spec.js`
 
 ## Prerequisites
 
