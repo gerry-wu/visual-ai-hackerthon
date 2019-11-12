@@ -18,7 +18,7 @@ class DashboardPage extends Page {
   }
 
   open() {
-    super.open('/hackathonApp.html')
+    super.open('/hackathonAppV2.html')
   }
 
   sort() {

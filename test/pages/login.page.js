@@ -47,7 +47,7 @@ export class LoginPage extends Page {
     return $('.alert-warning')
   }
   open(parameter) {
-    parameter ? super.open(`/hackathon.html?${parameter}`) : super.open('/hackathon.html')
+    parameter ? super.open(`/hackathonV2.html?${parameter}`) : super.open('/hackathonV2.html')
   }
 
   login(username, password) {
