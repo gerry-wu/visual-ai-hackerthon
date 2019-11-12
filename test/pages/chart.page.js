@@ -9,7 +9,7 @@ class ChartPage extends Page {
     this.addDataButton.click()
   }
   open() {
-    super.open('/hackathonChart.html')
+    super.open('/hackathonChartV2.html')
   }
 }
 

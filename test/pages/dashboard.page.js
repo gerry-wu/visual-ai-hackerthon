@@ -18,7 +18,7 @@ class DashboardPage extends Page {
   }
 
   open() {
-    super.open('/hackathonApp.html')
+    super.open('/hackathonAppV2.html')
   }
 
   sort() {
@@ -39,9 +39,13 @@ class DashboardPage extends Page {
   getDataFromTable() {
     const header = this.getTableHeader()
     return this.getTableRows().map(row => {
-      const rowData = row
-        .$$('td')
-        .reduce((accu, curr, tdIndex) => ({ ...accu, [header[tdIndex]]: curr.getText() }), {})
+      const rowData = row.$$('td').reduce(
+        (accu, curr, tdIndex) => ({
+          ...accu,
+          [header[tdIndex]]: curr.getText(),
+        }),
+        {}
+      )
 
       const rowDataWithAmountValue = {
         ...rowData,

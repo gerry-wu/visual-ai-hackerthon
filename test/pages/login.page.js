@@ -5,7 +5,7 @@ export class LoginPage extends Page {
     return $('.logo-w')
   }
   get heading() {
-    return $('h4=Login Form')
+    return $('h4=Logout Form')
   }
   get usernameLabel() {
     return $('label=Username')
@@ -13,17 +13,11 @@ export class LoginPage extends Page {
   get username() {
     return $('#username')
   }
-  get usernameIcon() {
-    return $('.os-icon-user-male-circle')
-  }
   get passwordLabel() {
-    return $('label=Password')
+    return $('label=Pwd')
   }
   get password() {
     return $('#password')
-  }
-  get passwordIcon() {
-    return $('.os-icon-fingerprint')
   }
   get submitBtn() {
     return $('#log-in')
@@ -35,10 +29,10 @@ export class LoginPage extends Page {
     return $('.form-check-label')
   }
   get twitterAnchor() {
-    return $('a img[src="img/social-icons/twitter.png"]')
+    return $('span img[src="img/social-icons/twitter.png"]')
   }
   get facebookAnchor() {
-    return $('a img[src="img/social-icons/facebook.png"]')
+    return $('span img[src="img/social-icons/facebook.png"]')
   }
   get linkedinAnchor() {
     return $('a img[src="img/social-icons/linkedin.png"]')
@@ -47,7 +41,7 @@ export class LoginPage extends Page {
     return $('.alert-warning')
   }
   open(parameter) {
-    parameter ? super.open(`/hackathon.html?${parameter}`) : super.open('/hackathon.html')
+    parameter ? super.open(`/hackathonV2.html?${parameter}`) : super.open('/hackathonV2.html')
   }
 
   login(username, password) {
