@@ -83,10 +83,10 @@ describe('Canvas Chart Test', () => {
   it('should display the bar chart comparing the expenses for the year 2017 and 2018', () => {
     LoginPage.open()
     LoginPage.loginWithValidCredential()
-    DashboardPage.clickCompareExpense()
+    DashboardPage.CompareExpenseAnchor.click()
     expect(browser.getUrl()).to.include('/hackathonChartV2.html')
     // Expect the data in the bar chart should display correctly,
-    ChartPage.clickAddDataButton()
+    ChartPage.addDataButton.click()
     // Expect the data of next year is added to the bar chart
   })
 })

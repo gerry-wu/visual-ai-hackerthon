@@ -6,7 +6,7 @@ class DashboardPage extends Page {
   }
 
   get CompareExpenseAnchor() {
-    return $('#showExpensesChart')
+    return $('=Compare Expenses')
   }
 
   get flashSalesOne() {
@@ -51,10 +51,6 @@ class DashboardPage extends Page {
       }
       return rowDataWithAmountValue
     })
-  }
-
-  clickCompareExpense() {
-    this.CompareExpenseAnchor.click()
   }
 }
 

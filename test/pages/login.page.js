@@ -5,7 +5,7 @@ export class LoginPage extends Page {
     return $('.logo-w')
   }
   get heading() {
-    return $('h4=Login Form')
+    return $('.auth-header')
   }
   get usernameLabel() {
     return $('label=Username')
@@ -17,7 +17,8 @@ export class LoginPage extends Page {
     return $('.os-icon-user-male-circle')
   }
   get passwordLabel() {
-    return $('label=Password')
+    // return $('label=Password')
+    return $('label=Pwd') // label has been changed to Pwd in app V2
   }
   get password() {
     return $('#password')
@@ -35,13 +36,13 @@ export class LoginPage extends Page {
     return $('.form-check-label')
   }
   get twitterAnchor() {
-    return $('a img[src="img/social-icons/twitter.png"]')
+    return $('img[src="img/social-icons/twitter.png"]')
   }
   get facebookAnchor() {
-    return $('a img[src="img/social-icons/facebook.png"]')
+    return $('img[src="img/social-icons/facebook.png"]')
   }
   get linkedinAnchor() {
-    return $('a img[src="img/social-icons/linkedin.png"]')
+    return $('img[src="img/social-icons/linkedin.png"]')
   }
   get alert() {
     return $('.alert-warning')

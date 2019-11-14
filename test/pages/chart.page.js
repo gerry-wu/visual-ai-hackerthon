@@ -5,9 +5,6 @@ class ChartPage extends Page {
     return $('#addDataset')
   }
 
-  clickAddDataButton() {
-    this.addDataButton.click()
-  }
   open() {
     super.open('/hackathonChartV2.html')
   }

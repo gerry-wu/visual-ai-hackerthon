@@ -4,12 +4,13 @@
 
 The repo is created according to the requirement of [Applitools Visual AI Rockstar Hackathon 2019](https://applitools.com/hackathon) . It aims to compare the traditional e2e test with visual AI testing.
 
-Technology used: 
-* E2E framework: [webdriverIO 5](https://github.com/webdriverio/webdriverio)
+Technology used:
 
-* Test runner: [wdio test runner](https://github.com/webdriverio/webdriverio)
+- E2E framework: [webdriverIO 5](https://github.com/webdriverio/webdriverio)
 
-* Visual regression: [applitools service from wdio](https://webdriver.io/docs/applitools-service.html)
+- Test runner: [wdio test runner](https://github.com/webdriverio/webdriverio)
+
+- Visual regression: [wdio-applitools-service](https://webdriver.io/docs/applitools-service.html)
 
 ## File Structure
 
@@ -38,9 +39,10 @@ The test is organized in Page Object Pattern.
  ┗ 📜wdio.visual.conf.js                   # wdio config with applitools service enabled
 ```
 
-Currently, the pages are using the path from V2 app. To run the test against the V1 app, you will need to:
-* remove `V2` from all the relative paths used in page files
-* change the `--spec` parameter of the `test` script from `package.json` so that it's pointing to `traditionalTest.spec.js`
+Currently, the pages are using the path from [V2 app](https://demo.applitools.com/hackathonV2.html). To run the test against the [V1 app](https://demo.applitools.com/hackathon.html), you will need to:
+
+- remove `V2` from all the relative paths used in page files
+- change the `--spec` parameter of the `test` script from `package.json` so that it's pointing to `traditionalTest.spec.js`
 
 ## Prerequisites
 
@@ -71,7 +73,7 @@ npm run visualtest
 
 ## Important Note
 
-Applitools service currently doesn't support all the applitool eye config setup except for viewport, so to run the visual test in batch, or to take full screen screenshot. You'll have to edit the `index.js` file in side of `/node-module/@wdio/applitools-service/build` and manually set the config at the end of the `beforeSession(config)` function, so that it can allow more options in the applitools options in `wdio.conf.js`
+Currently, the applitools service that wdio provides doesn't fully support the applitool eye config setup except for viewport, so to run the visual test in batch, or to take full-screen screenshot. You'll have to edit the `index.js` file inside of `/node-modules/@wdio/applitools-service/build` and manually set the config at the end of the `beforeSession(config)` function, so that it can allow more customized configurations using the applitools options in config file (`wdio.visual.conf.js`)
 
 ```javascript
 beforeSession(config) {

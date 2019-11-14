@@ -14,17 +14,17 @@ describe('Data-driven Test', () => {
     {
       testCase: 'should show error when login without username and password',
       username: '',
-      password: ''
+      password: '',
     },
     {
       testCase: 'should show error when login without password',
       username: 'my name',
-      password: ''
+      password: '',
     },
     {
       testCase: 'should show error when login without username',
       username: '',
-      password: 'testPassword'
+      password: 'testPassword',
     },
   ]
 
@@ -32,7 +32,7 @@ describe('Data-driven Test', () => {
     LoginPage.open()
   })
 
-  invalidLoginData.map(({ testCase, username, password, error }) => {
+  invalidLoginData.map(({ testCase, username, password }) => {
     it(testCase, () => {
       LoginPage.login(username, password)
       browser.takeSnapshot(`Invalid login with username: "${username}" and password: "${password}"`)
@@ -60,9 +60,9 @@ describe('Canvas Chart Test', () => {
   it('should display the bar chart comparing the expenses for the year 2017 and 2018', () => {
     LoginPage.open()
     LoginPage.loginWithValidCredential()
-    DashboardPage.clickCompareExpense()
+    DashboardPage.CompareExpenseAnchor.click()
     browser.takeSnapshot('chart - default view')
-    ChartPage.clickAddDataButton()
+    ChartPage.addDataButton.click()
     browser.takeSnapshot('chart - data added')
   })
 })
